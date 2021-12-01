@@ -23,5 +23,10 @@
 
 #Section 13: E-Commerce API | 246. User Model
 
+#Section 13: E-Commerce API | 247. Validator Package
+    Documentation:
+        npm validator: https://www.npmjs.com/package/validator
+        mongoose: https://mongoosejs.com/docs/validation.html 
+
 
 
