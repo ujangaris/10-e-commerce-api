@@ -12,6 +12,14 @@
 
 #Section 13: E-Commerce API | 243. Basic Routes
 
+#Section 13: E-Commerce API | 244. notFound vs errorHandler Middleware
+
+#Section 13: E-Commerce API | 245. Morgan Package
+    Documentation: https://www.npmjs.com/package/morgan
+    buka browser: http://localhost:5000
+        kemudian liat pada terminal : GET / 200 - - 7.403 ms
+    buka browser: http://localhost:5000/apple
+        kemudian liat pada terminal : GET /apple 404 20 - 0.773 ms
 
 
 
