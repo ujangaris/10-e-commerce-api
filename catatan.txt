@@ -28,5 +28,6 @@
         npm validator: https://www.npmjs.com/package/validator
         mongoose: https://mongoosejs.com/docs/validation.html 
 
+#Section 13: E-Commerce API | 248. Auth Routes Structure
 
 
