@@ -3,7 +3,12 @@
 
 #Section 13: E-Commerce API | 241. Basic Express Server
 
+#Section 13: E-Commerce API | 242. connect To DB
+    pada browser: mongodb Atlas => connect -> pilih yang ke 2 copy code aplication:
+            mongodb+srv://ujang:<password>@nodeexpressproject.kfzgl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
+    paste pada file .env dan modifikasi:
+        MONGO_URL=mongodb+srv://ujang:admin0k8@nodeexpressproject.kfzgl.mongodb.net/10-e-commerce?retryWrites=true&w=majority
 
 
 
