@@ -30,4 +30,19 @@
 
 #Section 13: E-Commerce API | 248. Auth Routes Structure
 
+#Section 13: E-Commerce API | 249. Postman Environment Setup
+    pada postman:
+        No Environment klik add trus namakan : DEV Environment
+        VARIABLE                INITIAL VALUE                   CURRENT VALUE
+        URL                     http://localhost:5000/api/v1    http://localhost:5000/api/v1
+
+        kemudian save.
+    
+        Logout User
+            GET {{URL}}/auth/logout
+        Login User
+            POST {{URL}}/auth/Login
+        Register User
+            POST {{URL}}/auth/register
+
 
