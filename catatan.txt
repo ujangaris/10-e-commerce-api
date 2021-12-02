@@ -202,7 +202,10 @@
                 
             pada Postman lihat pada tab cookie, akan ada response yang tampil.
 
-
+#Section 13: E-Commerce API | 257. Parse Cookies
+    Pengujian pada Postman:
+        GET {{URL}}
+        request data maka response akan menampilkan cookie.
 
 
 
