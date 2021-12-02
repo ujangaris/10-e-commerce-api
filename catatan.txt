@@ -158,6 +158,27 @@
                         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic3VzYW4iLCJ1c2VySWQiOiI2MWE4OTc0M2FlNDJmMDQ0Y2UwYTY2ODIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2Mzg0Mzg3MjMsImV4cCI6MTYzODUyNTEyM30.kQmHHo7xq-lJPT69G-uOen52g2M6v5X8mLpXI7PXFu8"
                     }
 
+#Section 13: E-Commerce API | 255. Refactor JWT Setup
+    langkah pertama Ketika belum melakukan penambahan source code, kosongkan  database  pada mongodb atlas
+     dan mencoba melakukan Pengujian pada Postman:
+        Register User:
+            POST {{URL}}/auth/register
+                body -> raw -> json:
+                    {
+                        "name": "susan",
+                        "email": "susan@gmail.com",
+                        "password": "secret"
+                    }
+                hasil response: 
+                    {
+                        "user": {
+                            "name": "susan",
+                            "userId": "61a89743ae42f044ce0a6682",
+                            "role": "admin"
+                        },
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic3VzYW4iLCJ1c2VySWQiOiI2MWE4OTc0M2FlNDJmMDQ0Y2UwYTY2ODIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2Mzg0Mzg3MjMsImV4cCI6MTYzODUyNTEyM30.kQmHHo7xq-lJPT69G-uOen52g2M6v5X8mLpXI7PXFu8"
+                    }
+            dapat di lihat token tergenerate setelah di Refactor. 
 
 
 
