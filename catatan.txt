@@ -82,6 +82,34 @@
                         "msg": "Email already exists"
                     }
 
+#Section 13: E-Commerce API | 252. User Roles
+    langkah pertama Ketika belum melakukan penambahan source code, kosongkan  database  pada mongodb atlas
+     dan mencoba melakukan Pengujian pada Postman:
+        Register User:
+            POST {{URL}}/auth/register
+                body -> raw -> json:
+                    {
+                        "name": "susan",
+                        "email": "susan@gmail.com",
+                        "password": "secret",
+                        "role": "admin"
+                    }
+                hasil response: 
+                    {
+                        "user": {
+                            "name": "susan",
+                            "email": "susan@gmail.com",
+                            "password": "secret",
+                            "role": "user",
+                            "_id": "61a8737ab0e68129a25c7d00",
+                            "__v": 0
+                        }
+                    }
+                
+                bisa di dihal diatas akan tidak sama untuk role.
+
+                setelah melakukan penambahan source code lakukan langkah diatas!
+                noted: jika admin sudah ada maka role admin yang dipilih akan otomatis jd user.
 
 
 
