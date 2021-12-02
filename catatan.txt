@@ -111,6 +111,31 @@
                 setelah melakukan penambahan source code lakukan langkah diatas!
                 noted: jika admin sudah ada maka role admin yang dipilih akan otomatis jd user.
 
+#Section 13: E-Commerce API | 253. Hash Passwords
+    langkah pertama Ketika belum melakukan penambahan source code, kosongkan  database  pada mongodb atlas
+     dan mencoba melakukan Pengujian pada Postman:
+        Register User:
+            POST {{URL}}/auth/register
+                body -> raw -> json:
+                    {
+                        "name": "susan",
+                        "email": "susan@gmail.com",
+                        "password": "secret"
+                    }
+                hasil response: 
+                    {
+                    "user": {
+                        "name": "susan",
+                        "email": "susan@gmail.com",
+                        "password": "$2a$10$WjozVQKT.wFbj/PGBBKJI.H6QbvZ3pCkgPDuL0qIZKdu1DMtBDfHi",
+                        "role": "admin",
+                        "_id": "61a892450ba2e2138fe921f1",
+                        "__v": 0
+                    }
+            role akan menjadi admin dikarenakan belum ada user yang terdaftar, 
+            jika mencoba melakukan pengunjian kembali dan mendaftarkan user baru maka secara otomatis role akan menjadi user.
+
+            dapat dilihat pula password akan tergenerate dengan Hash.
 
 
 
@@ -122,3 +147,5 @@
 
 
 
+
+                
