@@ -207,6 +207,9 @@
         GET {{URL}}
         request data maka response akan menampilkan cookie.
 
+#Section 13: E-Commerce API | 258. Refactor Cookies Setup
+    pengunjian pada Postman:
+        lakukan register user, kemudian lakukan GET request user dan lihat pada terminal.
 
 
 
