@@ -180,7 +180,27 @@
                     }
             dapat di lihat token tergenerate setelah di Refactor. 
 
+#Section 13: E-Commerce API | 256. Cookies Setup
+    Documentation: https://expressjs.com/en/4x/api.html#res.cookie
 
+        Register User:
+            POST {{URL}}/auth/register
+                body -> raw -> json:
+                    {
+                        "name": "john",
+                        "email": "john@gmail.com",
+                        "password": "secret"
+                    }
+                hasil response: 
+                    {
+                        "user": {
+                            "name": "john",
+                            "userId": "61a931379a2139c4888d49cc",
+                            "role": "user"
+                        }
+                    }
+                
+            pada Postman lihat pada tab cookie, akan ada response yang tampil.
 
 
 
