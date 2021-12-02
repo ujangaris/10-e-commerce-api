@@ -45,4 +45,25 @@
         Register User
             POST {{URL}}/auth/register
 
+#Section 13: E-Commerce API | 250. Register - Initial Setup
+    Pengujian pada Postman:
+        Register User:
+            POST {{URL}}/auth/register
+                body -> raw -> json:
+                    {
+                        "name": "david",
+                        "email": "david@gmail.com",
+                        "password": "secret"
+                    }
+                hasil response:
+                    {
+                        "user": {
+                            "name": "david",
+                            "email": "david@gmail.com",
+                            "password": "secret",
+                            "role": "user",
+                            "_id": "61a86e4f93279f8d41088271",
+                            "__v": 0
+                        }
+                    }
 
