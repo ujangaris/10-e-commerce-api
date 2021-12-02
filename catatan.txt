@@ -67,3 +67,30 @@
                         }
                     }
 
+#Section 13: E-Commerce API | 251. Register - Unique Email
+    Pengujian pada Postman:
+        Register User:
+            POST {{URL}}/auth/register
+                body -> raw -> json:
+                    {
+                        "name": "david",
+                        "email": "david@gmail.com",
+                        "password": "secret"
+                    }
+                hasil response: 
+                    {
+                        "msg": "Email already exists"
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
