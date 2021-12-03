@@ -211,6 +211,10 @@
     pengunjian pada Postman:
         lakukan register user, kemudian lakukan GET request user dan lihat pada terminal.
 
+#Section 13: E-Commerce API | 259. signed and secure flags
+    Documentation: https://expressjs.com/en/4x/api.html#res.cookie
+    pengunjian pada Postman:
+        lakukan register user, kemudian lakukan GET request user dan lihat pada terminal.
 
 
 
