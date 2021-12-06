@@ -240,5 +240,12 @@
         kemudian logout :  GET {{URL}}/auth/logout
         selanjutnya coba send data GET {{URL}} , maka token pada cookie tidak akan muncul kembali
 
+#Section 13: E-Commerce API | 262. Cookies - Big Picture and "Gotchas"
+    pertama-tama, copy file front-end dari final-front-end kedalam starter, kemudian ganti dengan nama public
+
+    kemudian buka browser : http://localhost:5000
+    buka inspect -. aplication -> Storage ->  Cookies : http://localhost:5000  nah coba login dengan user terdaftar 
+    pada database dan logout dan lihat perbedaannya
+
 
                 
