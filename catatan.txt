@@ -274,6 +274,27 @@
 
 #Section 13: E-Commerce API | 263. User Routes - Structure
 
+#Section 13: E-Commerce API | 264. User Routes - Postman
+    Get All Users 
+        GET {{URL}}/users
 
+    Get Single User 
+        GET {{URL}}/users/123
+
+    Show Current User 
+        GET {{URL}}/users/showMe
+    
+    Update User
+        PATCH {{URL}}/users/updateUser
+        body -> raw -> json :
+            {
+                "name":"bobo"
+            }
+    Update User password
+        PATCH {{URL}}/users/updateUserPassword
+        body -> raw -> json :
+            {
+                "password":"secret"
+            }
 
                 
