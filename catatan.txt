@@ -247,5 +247,32 @@
     buka inspect -. aplication -> Storage ->  Cookies : http://localhost:5000  nah coba login dengan user terdaftar 
     pada database dan logout dan lihat perbedaannya
 
+#Section 13: E-Commerce API | 262. Cookies - Big Picture and "Gotchas" | Part 2 out front-end
+    pertama-tama, copy file react-front-end dari final-front-end ke Desktop
+    kemudiann buka dengan code editor, pada terminal ketikan npm install && npm start
+    pada browser: http://localhost:3000/,
+    kemungkinan akan error: ×Unhandled Rejection (TypeError): Failed to fetch
+    untuk menghandlenya tambahkan cors
+
+    tahap berikutya agar bisa melakukan action:
+        pada react-front-end  file package.json tambahkan: proxy": "http://localhost:5000" ,setelah :
+            "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:5000" => ini yang ditambahkan 
+
+  masih pada bagian react-frond-end/app.js, uncoment code : const rootUrl = 'http://localhost:5000';
+  dan hidupkan code yang dimatikan.(disini seperti matikan yang di nyalakan dan nyalakan yang di matikan codenya).
+  selanjutnya lihat pada inspect -. aplication -> Storage ->  Cookies : http://localhost:5000  nah coba login dengan user terdaftar 
+  pada database dan logout dan lihat perbedaannya
+
+
+    dapat dilihat jika setelah login kita menekan button testing pada teminal akan tergenerate token.
+
+
+
 
                 
