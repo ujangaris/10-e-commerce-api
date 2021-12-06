@@ -216,6 +216,23 @@
     pengunjian pada Postman:
         lakukan register user, kemudian lakukan GET request user dan lihat pada terminal.
 
+#Section 13: E-Commerce API | 260. Login Route
+    Pengujian pada Postman:
+        Login User:
+            POST {{URL}}/auth/login
+                body -> raw -> json:
+                    {
+                        "email": "john@gmail.com",
+                        "password": "secret"
+                    }
+                hasil response:
+                    {
+                        "user": {
+                            "name": "john",
+                            "userId": "61a93d529115ee50eb6e3ed6",
+                            "role": "admin"
+                        }
+                    }
 
 
 
