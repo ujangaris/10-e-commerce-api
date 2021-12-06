@@ -234,6 +234,11 @@
                         }
                     }
 
+#Section 13: E-Commerce API | 261. Logout Route
+    Pengujian pada Postman:
+        pertama lakukan login, 
+        kemudian logout :  GET {{URL}}/auth/logout
+        selanjutnya coba send data GET {{URL}} , maka token pada cookie tidak akan muncul kembali
 
 
                 
