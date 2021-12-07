@@ -311,4 +311,25 @@
                 "msg": "No item found with id : 61aa859"
             }
 
-                
+#Section 13: E-Commerce API | 266. Authenticate User - Setup
+    Pengujian pertama (tanpa login sebagai admin) pada postman:
+        Get All Users :
+            GET {{URL}}/users
+        response pada terminal : error, no token present
+        Get Single User :
+            GET {{URL}}/users/<id user terdaftar>
+        response pada terminal : error, no token present
+
+    Pengujian kedua (dengan login sebagai admin) pada postman:
+        Get All Users :
+            GET {{URL}}/users
+        response pada terminal :  token present
+        Get Single User :
+            GET {{URL}}/users/<id user terdaftar>
+        response pada terminal :  token present
+
+
+
+
+
+
