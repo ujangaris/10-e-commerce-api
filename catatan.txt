@@ -298,4 +298,17 @@
             }
 
 #Section 13: E-Commerce API | 265. GetAllUsers and getSingleUser
+    Pengujian pada postman:
+        Get All Users:
+            GET {{URL}}/users
+        response: akan tampil semua user yang ada pada database
+        Get Single Users:
+            GET {{URL}}/users/<id user terdaftar>
+        response: akan tampil satu user yang ada pada database
+
+        jika disalahkan id user /menggunakan id user sembarang responseakan menampilkan:
+            {
+                "msg": "No item found with id : 61aa859"
+            }
+
                 
