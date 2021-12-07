@@ -297,4 +297,5 @@
                 "password":"secret"
             }
 
+#Section 13: E-Commerce API | 265. GetAllUsers and getSingleUser
                 
