@@ -328,7 +328,11 @@
             GET {{URL}}/users/<id user terdaftar>
         response pada terminal :  token present
 
-
+#Section 13: E-Commerce API | 267. Authenticate User - Complete
+    Pengujian pada postman:
+        Get All Users:
+            GET {{URL}}/users
+        response pada terminal :  { name: 'anna', userId: '61aa859e521d9e27ac0959d2', role: 'user' }
 
 
 
