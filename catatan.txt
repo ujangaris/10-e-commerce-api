@@ -334,6 +334,20 @@
             GET {{URL}}/users
         response pada terminal :  { name: 'anna', userId: '61aa859e521d9e27ac0959d2', role: 'user' }
 
+#Section 13: E-Commerce API | 268. Authorize Permission - Setup
+    Pengujian pada postman:
+        login sebagai user, kemudian coba 
+        Get All Users:
+            GET {{URL}}/users
+        response  : 
+            {
+                "msg": "Unauthorized to access this route"
+            }
 
+        kemudian jika user logout dan mencoba melakukan 'get all user' kembali maka 
+        response :
+            {
+                "msg": "Authentication Invalid"
+            }
 
 
