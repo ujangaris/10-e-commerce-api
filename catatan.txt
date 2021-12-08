@@ -350,4 +350,27 @@
                 "msg": "Authentication Invalid"
             }
 
+#Section 13: E-Commerce API | 269. Authorize Permission - Complete
+        Pengujian pada postman: login sebagai user, kemudian coba 
+        Get All Users:
+            GET {{URL}}/users
+        response  : 
+            {
+                "msg": "Unauthorized to access this route"
+            }
+
+        kemudian jika user logout dan mencoba melakukan 'get all user' kembali maka 
+        response :
+            {
+                "msg": "Authentication Invalid"
+            }
+
+        pengujian diatas jika menggunakan usernya admin akan menampilkan data pada get all user 
+
+
+
+
+
+
+
 
