@@ -367,6 +367,12 @@
 
         pengujian diatas jika menggunakan usernya admin akan menampilkan data pada get all user 
 
+#Section 13: E-Commerce API | 270. ShowMe Controller
+        Pengujian pada postman: Show Current User
+            GET {{URL}}/users/showMe 
+            coba send request.
+            response akan menampilkan user yang login (admin/user)
+
 
 
 

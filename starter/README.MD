@@ -124,12 +124,12 @@
 
 #### Authorize Permissions Complete
 
-- [] introduce params
+- [x] introduce params
 
 #### ShowCurrentUser
 
-- [] get user from req
-- [] send response with user
+- [x] get user from req
+- [x] send response with user
 
 #### UpdateUserPassword
 
