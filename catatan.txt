@@ -373,6 +373,28 @@
             coba send request.
             response akan menampilkan user yang login (admin/user)
 
+#Section 13: E-Commerce API | 271. UpdatePassword Controller
+    Documentation: https://mongoosejs.com/docs/api/document.html#document_Document-save
+        Pengujian pada postman: login sebagai user, kemudian coba Update User Password
+            PATCH {{URL}}/users/updateUserPassword
+                {
+                    "newPassword":"newsecret",
+                    "oldPassword":"secret"
+                }
+            response: "msg": "Success! Password Updated."
+
+            setelah itu coba lagi login dengan user yang passwordnya telah di ubah dengan menggunakan password yang lama;
+            response: "msg": "Invalid Credential"
+
+            jika menggunakan password yang baru maka akan berhasil login.
+            response:
+                {
+                    "user": {
+                        "name": "anna",
+                        "userId": "61aa859e521d9e27ac0959d2",
+                        "role": "user"
+                    }
+                }
 
 
 
