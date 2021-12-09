@@ -398,6 +398,27 @@
 
 #Section 13: E-Commerce API | 272. CreateTokenUser Function
 
+#Section 13: E-Commerce API | 273. UpdateUser Controller - FindOneAndUpdate()
+        Pengujian pada postman: login sebagai user anna@gmail.com, kemudian coba Update User 
+            PATCH {{URL}}/users/updateUser
+            body -> raw -> json:
+                {
+                    "name": "newnana","email":"anna@gmail.com"
+                }
+            
+            response:
+                {
+                    "user": {
+                        "name": "newnana",
+                        "userId": "61aa859e521d9e27ac0959d2",
+                        "role": "user"
+                    }
+                }
+            
+            selanjutnya coba:
+            GET {{URL}}/users/showMe 
+            coba send request.
+            response akan menampilkan user yang login anna namanya sudah terupdate
 
 
 
