@@ -420,11 +420,18 @@
             coba send request.
             response akan menampilkan user yang login anna namanya sudah terupdate
 
-#Section 13: E-Commerce API | 273. UpdateUser Controller - user.save()
+#Section 13: E-Commerce API | 274. UpdateUser Controller - user.save()
         Pengujian pada postman: login sebagai user anna@gmail.com, kemudian coba Update User 
             PATCH {{URL}}/users/updateUser
         kemudian coba login kembali, jika gagal coba hapus data pada databse mongoDB Atlas 
 
+#Section 13: E-Commerce API | 275. CheckPermissions Function
+        Pengujian pada postman: login sebagai user anna@gmail.com, kemudian coba get single user menggunakan id user lain
+            GET {{URL}}/users/61b204f107646ad8eb5a30d0
+        response : "msg": "Not authorized to access this route"
+
+        namun ketika mencoba get single user dengan user yang sedang login/anna akan berhasil.
+        coba lakukan pengujian untuk admin juga. 
 
 
 
