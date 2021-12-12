@@ -469,4 +469,19 @@
         sekarang lakukan login sebagai admin , terlebih dahulu sebelum upload image:
             response: upload image
 
+#Section 13: E-Commerce API | 280. CreateProduct Controller
+    Pengujian pada Postman untuk Create product :
+        coba create Product setelah login sebagai admin login:
+            POST {{URL}}/products
+            body -> raw -> json :
+                {
+                    "name": "testing",
+                    "description": "some description"
+                    "category": "office"
+                    "company": "ikea", // ini harus sesui enum yang ada didatabase agar berhasil 
+                }
+            
+            response status: 201 Created
+        
+        atau pengujian create data bisa dilakukan dengan mengkopi paste sorce code pada mockData/products.json
 

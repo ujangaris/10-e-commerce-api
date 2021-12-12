@@ -15,7 +15,7 @@ const ProductSchema = new mongoose.Schema(
     description: {
       type: String,
       required: [true, 'Please provide product description'],
-      maxlength: [100, 'Description can not be more than 1000 characters'],
+      maxlength: [1000, 'Description can not be more than 1000 characters'],
     },
     image: {
       type: String,
@@ -36,6 +36,7 @@ const ProductSchema = new mongoose.Schema(
     },
     colors: {
       type: [String],
+      default: ['#222'],
       required: true,
     },
     featured: {
