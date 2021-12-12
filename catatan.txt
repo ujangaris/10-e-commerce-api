@@ -439,4 +439,34 @@
 
 #Section 13: E-Commerce API | 278. Product Routes - Structure
 
+#Section 13: E-Commerce API | 279. Product Routes - Postman
+        Get All Products
+            GET {{URL}}/products
+        Get Single Product
+            GET {{URL}}/products/123
+        Create Product
+            POST {{URL}}/products
+        Patch Product
+            PATCH {{URL}}/products/123
+        Delete Product
+            DELETE {{URL}}/products/123
+        Upload Image
+            POST {{URL}}/products/uploadimage
+
+    Pengujian pada Postman untuk create product:
+        coba create Product tanpa login:
+            POST {{URL}}/products
+            response: "msg": "Authentication Invalid"
+        
+        sekarang lakukan login sebagai admin , terlebih dahulu sebelum create product:
+            response: create product
+
+    Pengujian pada Postman untuk Upload Image:
+        coba create Product tanpa login:
+            POST {{URL}}/products/uploadimage
+            response: "msg": " Unauthorized to access this route"
+        
+        sekarang lakukan login sebagai admin , terlebih dahulu sebelum upload image:
+            response: upload image
+
 
