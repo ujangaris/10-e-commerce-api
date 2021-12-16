@@ -485,3 +485,26 @@
         
         atau pengujian create data bisa dilakukan dengan mengkopi paste sorce code pada mockData/products.json
 
+#Section 13: E-Commerce API | 281. Remaining Product Controllers
+    pengujian pada postman:
+        login sebagai admin, kemudian get all products, copi id salah satu product lalu pastekan pada :
+        single product
+            GET {{URL}}/products/<id poduct>
+            send response, hasil response: akan menampilkan peroduct sesuai id 
+        Update product
+            PATCH {{URL}}/products/<id poduct>
+                body -> raw -> json :
+                {"name": "New testing product"}
+        Delete product
+            DELETE {{URL}}/products/<id poduct>
+            send response, hasil response: "msg": "Success! Product removed."
+        
+        periksa kembali dengan Get All product : GET {{URL}}/products.
+
+        untuk lebih memastikan keamanan , coba login sebagai user yang bukan admin,
+        kemudian lakukan Get All Products, Get Single product maka ,response akan menampilkan data
+
+        namun jika mencoba untuk update, delete data maka, 
+        response akan menampilkan: "msg": " Unauthorized to access this route"
+        
+
