@@ -507,7 +507,7 @@
         namun jika mencoba untuk update, delete data maka, 
         response akan menampilkan: "msg": " Unauthorized to access this route"
         
-#Section 13: E-Commerce API | 282. Upload Image Controllers
+#Section 13: E-Commerce API | 282. Upload Image Controllers Part 1
     pada root buat folder public/uploads
     copy file image pada final/public/upload yang bernama: example.jpeg kedalam directory public/uploads kita.
     kemudian coba lakukan create data pada postman , agar lebih mudah copy pada file mockData:
@@ -528,6 +528,13 @@
         agar lebih meyakinkan benar atau tidaknya gambar tersave secara default ,
         coba buka browsher : http://localhost:5000/uploads/example.jpeg
         hasil browser akan menampilkan gambar
+
+#Section 13: E-Commerce API | 282. Upload Image Controllers Part 2
+    pengujian pada postman: 
+        POST {{URL}}/products/uploadimage
+            body -> form-data : pada key text nya ganti file, lalu valuenya search aja,trus send
+            hasil response : "image": "/uploads/computer-6.jpeg"
+            dan cek pada public/upload maka gambar yang diuploada sudah ada .
         
 
 
