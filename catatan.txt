@@ -507,4 +507,27 @@
         namun jika mencoba untuk update, delete data maka, 
         response akan menampilkan: "msg": " Unauthorized to access this route"
         
+#Section 13: E-Commerce API | 282. Upload Image Controllers
+    pada root buat folder public/uploads
+    copy file image pada final/public/upload yang bernama: example.jpeg kedalam directory public/uploads kita.
+    kemudian coba lakukan create data pada postman , agar lebih mudah copy pada file mockData:
+     POST {{URL}}/products
+        body -> raw -> json :
+        {
+            "name": "accent chair",
+            "price": 25999,
+            "colors": ["#ff0000", "#00ff00", "#0000ff"],
+            "company": "marcos",
+            "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
+            "category": "office"
+        }
+
+        untuk image kosongin , lalu send response, 
+        pada hasil response maka image akan tergenerate dengan : "image": "/uploads/example.jpeg",
+
+        agar lebih meyakinkan benar atau tidaknya gambar tersave secara default ,
+        coba buka browsher : http://localhost:5000/uploads/example.jpeg
+        hasil browser akan menampilkan gambar
+        
+
 
