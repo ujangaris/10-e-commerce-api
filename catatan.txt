@@ -644,3 +644,20 @@
                     path: 'user',
                     select: 'name',
                 });
+
+#Section 13: E-Commerce API | 291. Mongoose Virtuals
+    agar pupulate dapat digunakan perlu melakukan settiing pada Product models, 
+    ini dilakukan karna product model tidak ada relasi yang terhubung dengan review, berbanding terbalik 
+    dengan review model yang ada relasi dengan product.
+
+
+    Pengujian pada postman:
+        pertama login sebagai user 
+        Get single product
+        GET {{URL}}/products
+        
+        response : akan menampilkan satu data product beserta rating dari user2 yang memberi penilaian 
+
+
+
+
