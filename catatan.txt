@@ -537,6 +537,8 @@
             dan cek pada public/upload maka gambar yang diuploada sudah ada .
 
 #Section 13: E-Commerce API | 283. Review Model
+
+#Section 13: E-Commerce API | 284. Review Routes Structure
         
 
 
