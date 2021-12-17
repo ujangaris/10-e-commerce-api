@@ -539,6 +539,23 @@
 #Section 13: E-Commerce API | 283. Review Model
 
 #Section 13: E-Commerce API | 284. Review Routes Structure
+
+#Section 13: E-Commerce API | 285. Review Routes - Postman
+    pengujian pada postman :
+        yang tidak perlu login :
+            Get All Reviews
+                GET {{URL}}/reviews
+            Get Single review
+                GET {{URL}}/reviews/<id reviews>
+                
+        yang  perlu login :
+            Create Reviews
+                GET {{URL}}/reviews/<id reviews>
+            Update Reviews
+                GET {{URL}}/reviews/<id reviews>
+            Delete Reviews
+                GET {{URL}}/reviews/<id reviews>
+
         
 
 
