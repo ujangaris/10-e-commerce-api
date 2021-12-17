@@ -658,6 +658,13 @@
         
         response : akan menampilkan satu data product beserta rating dari user2 yang memberi penilaian 
 
+#Section 13: E-Commerce API | 292. Alternative Single Product Reviews
+    Pengujian pada postman:
+        pertama login sebagai user 
+        Get single product reviews
+        GET {{URL}}/products/<id product>/reviews
+        
+        response : akan menampilkan satu data product beserta rating dari user2 yang memberi penilaian 
 
 
 
