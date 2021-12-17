@@ -679,5 +679,18 @@
         dan ketika kita mencoba send request Get All Reviews
         response : review dengan id yang kita delete sudah tidak ada 
 
+#Section 13: E-Commerce API | 294. Aggregate Pipeline - Setup
+    Pengujian pada postman:
+        pertama login sebagai admin , 
+        kemudian copy dan paste id dari product yang sudah direview(kalo bisa 2-3 review biar lebih paham)
+        selanjutnya :
+        Update product 
+            PATCH {{URL}}/products/<id product>
+        response : menampilkan data yang berhasil di update
+        Delete product 
+            DELETE {{URL}}/products/<id product>
+        response : "msg": "Success! Product removed."
+
+        kemudian liat pula pada terminal method pada terminal mengikuti response yang kita request.
 
 
