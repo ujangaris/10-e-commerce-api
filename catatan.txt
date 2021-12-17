@@ -535,6 +535,8 @@
             body -> form-data : pada key text nya ganti file, lalu valuenya search aja,trus send
             hasil response : "image": "/uploads/computer-6.jpeg"
             dan cek pada public/upload maka gambar yang diuploada sudah ada .
+
+#Section 13: E-Commerce API | 283. Review Model
         
 
 
