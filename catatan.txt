@@ -693,4 +693,15 @@
 
         kemudian liat pula pada terminal method pada terminal mengikuti response yang kita request.
 
-
+#Section 13: E-Commerce API | 295. Reset Database
+    Pengujian pada postman:
+        pertama login sebagai admin , hapus semua reviews, 
+        kemudian copy dan paste id dari product yang sudah direview(kalo bisa 2-3 review biar lebih paham)
+        selanjutnya :
+        Create Reviews
+            POST {{URL}}/Reviews
+            untuk isinya liat pada file mockData/product.json
+        lalu  login sebagai user ,  selanjutnya :
+        Create Reviews
+            POST {{URL}}/Reviews
+            untuk isinya liat pada file mockData/product.json
