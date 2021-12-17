@@ -666,5 +666,18 @@
         
         response : akan menampilkan satu data product beserta rating dari user2 yang memberi penilaian 
 
+#Section 13: E-Commerce API | 293. Remove All Reviews
+    Pengujian pada postman:
+        pertama login sebagai admin , 
+        kemudian copy dan paste id dari product yang sudah direview(kalo bisa 2-3 review biar lebih paham)
+        selanjutnya :
+        Delete product 
+        DELETE {{URL}}/products/<id product>
+        
+        response : "msg": "Success! Product removed."
+
+        dan ketika kita mencoba send request Get All Reviews
+        response : review dengan id yang kita delete sudah tidak ada 
+
 
 
