@@ -576,5 +576,13 @@
             response :  "msg": "Already submitted review for this product"
         
 #Section 13: E-Commerce API | 287. Get All Reviews and Get Single Review Controller
+    Pengujian pada postman:
+        pertama login sebagai user, kemudian Get All review guna mendapat id review, 
+        Get All Review
+        GET {{URL}}/reviews
+        selanjutnya copy dan paste id review:
+            Get Single Review
+            GET {{URL}}/<id review>
+        response : akan menampilkan review  dari product 
 
 
