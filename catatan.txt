@@ -621,3 +621,26 @@
 
         jika login dengan user yang memberikan review makan akan berhasil.
 
+#Section 13: E-Commerce API | 290. Populate Method
+    Pengujian pada postman:
+        pertama login sebagai user 
+        Get All Review
+        GET {{URL}}/reviews
+        
+        response : akan ada penambahan product pada data json(name, company, dan price)
+
+        #note: disini juga bisa menambah pupulate sesuai kebutuhan , 
+                jika ada relasi lebih dari satu maka keduanya bisa dipanggil contoh:
+                const reviews = await Review.find({}).populate({
+                    path: 'product',
+                    select: 'name company price',
+                }); 
+
+                diatas hanya memanggil satu relasi, kalo dua seperti berikut:
+                const reviews = await Review.find({}).populate({
+                    path: 'product',
+                    select: 'name company price',
+                }).populate({
+                    path: 'user',
+                    select: 'name',
+                });
