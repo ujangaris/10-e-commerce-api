@@ -585,4 +585,22 @@
             GET {{URL}}/<id review>
         response : akan menampilkan review  dari product 
 
+#Section 13: E-Commerce API | 288. Delete Review Controller
+    Pengujian pada postman:
+        pertama login sebagai user, kemudian Get All review guna mendapat id review, 
+        Get All Review
+        GET {{URL}}/reviews
+        selanjutnya copy dan paste id review:
+            Delete Review
+            DELETE {{URL}}/<id review>
+        response : "msg": "Not authorized to access this route"
+
+        keudian coba login sebagai admin, dan lakukan langkah diatas,
+        response: 200 "msg": "Success! Review removed"
+
+        jika ingin mengechek review yang terlah dihapus masih ada atau tidak, coba  get single review:
+        Get single Review
+        GET {{URL}}/reviews/<id review>
+        response:404  "msg": "No review with id 61bc5a7b4cbc4ac5e991fde0"
+
 
