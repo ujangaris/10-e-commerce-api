@@ -575,5 +575,6 @@
             untuk selanjutnya coba send data diatas kembali,guna mengetahui fungsi yang kita buat berjalan atau tidak.
             response :  "msg": "Already submitted review for this product"
         
+#Section 13: E-Commerce API | 287. Get All Reviews and Get Single Review Controller
 
 
