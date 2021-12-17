@@ -556,6 +556,24 @@
             Delete Reviews
                 GET {{URL}}/reviews/<id reviews>
 
+#Section 13: E-Commerce API | 286. Create Review Controller
+    Pengujian pada postman:
+        Create Review
+        POST {{URL}}/reviews
+        pertama login sebagai user, kemudian Get All product guna mendapat id product, 
+        selanjutnya copy dan paste id product:
+            POST {{URL}}/<id product>
+            body -> raw -> json:
+                {
+                    "product":"61b5c8c654f8ef4e2e72a4aa",
+                    "rating": 1,
+                    "title":"bad product",
+                    "comment": "very, very bad product"
+                }
+            response : 200 OK,
+
+            untuk selanjutnya coba send data diatas kembali,guna mengetahui fungsi yang kita buat berjalan atau tidak.
+            response :  "msg": "Already submitted review for this product"
         
 
 
