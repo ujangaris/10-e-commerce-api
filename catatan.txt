@@ -603,4 +603,21 @@
         GET {{URL}}/reviews/<id review>
         response:404  "msg": "No review with id 61bc5a7b4cbc4ac5e991fde0"
 
+#Section 13: E-Commerce API | 289. Update Review Controller
+    Pengujian pada postman:
+        pertama login sebagai user yang bukan pemberi reiew, kemudian Get All review guna mendapat id review, 
+        Get All Review
+        GET {{URL}}/reviews
+        selanjutnya copy dan paste id review:
+            Update Review
+            PATCH {{URL}}/<id review>
+            body -> raw -> json:
+                {
+                    "rating": 5,
+                    "title":"good product",
+                    "comment": "very, very good product"
+                }
+        response : "msg": "Not authorized to access this route"
+
+        jika login dengan user yang memberikan review makan akan berhasil.
 
