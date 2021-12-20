@@ -705,3 +705,22 @@
         Create Reviews
             POST {{URL}}/Reviews
             untuk isinya liat pada file mockData/product.json
+
+#Section 13: E-Commerce API | 296. Aggregate Pipeline - Atlas
+    pertama-tama buka pada browser mongodb Atlas prodject kita 'Ecommerce'
+    kemudian pilih Schema  = review => Aggregation
+    pada stag => $match :
+        {
+            "product":ObjectId('61bc989c842d833211f73e1b')
+        }
+    ADD  stag baru => $group :
+        {
+            _id: null,
+            averageRating:{$avg:"$rating"},
+            numOfReviews:{$sum:1}
+        }
+    
+    selanjutnya export pipeline code to language => pilih NODE => centang include driver dan include statment,
+    kemudian kopi codenya
+
+    pada folder models/temp.js pastekan code yang td kita copy kemudian save
