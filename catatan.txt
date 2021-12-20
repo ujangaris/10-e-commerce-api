@@ -724,3 +724,13 @@
     kemudian kopi codenya
 
     pada folder models/temp.js pastekan code yang td kita copy kemudian save
+
+#Section 13: E-Commerce API | 297. Aggregate Pipeline - Review Model part 1
+    pengujian pada postman:
+    login sebagai user susan,
+    kemudian get all review, ambil id review dengan user susan
+    pastekan pada update review, jika berhasil akan ada pula response pada terminal
+    
+    
+    
+    
