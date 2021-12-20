@@ -731,6 +731,11 @@
     kemudian get all review, ambil id review dengan user susan
     pastekan pada update review, jika berhasil akan ada pula response pada terminal
     
+#Section 13: E-Commerce API | 297. Aggregate Pipeline - Review Model part 2
+    pengujian pada postman:
+    login sebagai admin, kemudian copy id rating yang diberikan oleh user,
+    kemudian coba hapus rating tersebut, dan chek get all product maka 
+    averageRating dan numOfReviews akan berkurang setelah dihapus.
     
     
     
