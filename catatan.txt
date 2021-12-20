@@ -737,5 +737,18 @@
     kemudian coba hapus rating tersebut, dan chek get all product maka 
     averageRating dan numOfReviews akan berkurang setelah dihapus.
     
+#Section 13: E-Commerce API | 298. Additional Group ID Example
+    pertama-tama buka pada browser mongodb Atlas prodject kita 'Ecommerce'
+    kemudian pilih Schema  = review => Aggregation
+    pada stag => $match :
+        {
+            "product":ObjectId('61bc989c842d833211f73e1b')
+        }
+    ADD  stag baru => $group :
+        {
+             _id: "4rating",
+            amount:{$sum:1}
+        }
+    
     
     
