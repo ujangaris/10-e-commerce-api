@@ -759,7 +759,7 @@
         LOGIN SEBAGAI ADMIN:
         Get All Order
             GET {{URL}}/orders
-            
+
         LOGIN SEBAGAI USER:
         Crete Order
             POST {{URL}}/orders
@@ -770,5 +770,16 @@
         Get Current User Order
             GET {{URL}}/orders/showAllMyOrders
 
+#Section 13: E-Commerce API | 302. Create Order - Check Product part 1
+    pengujian pada Postman:
+        Create order
+        POST {{URL}}/orders
+            body -> raw -> json:
+                copy data json pada file mockData/order.jsn lalu pastekan satu data,
+                pada tahap ini ambil id product : get all product lalu 
+                copy salah satu id product lalu pastekan/isikan  pada data yang mau kita insert
+            response : create order, 
+            jika taxt di hilangkan maka response: "msg": "Please provide tax and shipping fee"
+            jika items di kosongkan maka response: "msg": "No cart items provided"
     
     
