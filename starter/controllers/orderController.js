@@ -15,6 +15,21 @@ const createOrder = async (req, res) => {
       'Please provide tax and shipping fee'
     );
   }
+
+  let orderItems = [];
+  let subtotal = 0;
+
+  for (const item of cartItems) {
+    const dbProduct = await Product.findOne({ _id: item.product });
+    if (!dbProduct) {
+      throw new CustomError.NotFoundError(
+        `No product with iid : ${item.product}`
+      );
+    }
+    const { name, price, image, _id } = dbProduct;
+    console.log(name, price, image);
+  }
+
   res.send('create order');
 };
 const getAllOrders = async (req, res) => {
