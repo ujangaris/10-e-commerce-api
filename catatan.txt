@@ -753,5 +753,22 @@
 #Section 13: E-Commerce API | 299. Order Schema
 
 #Section 13: E-Commerce API | 300. Order Structure
+
+#Section 13: E-Commerce API | 301. Order - Postman Setup
+    E-commerce/order file collection:
+        LOGIN SEBAGAI ADMIN:
+        Get All Order
+            GET {{URL}}/orders
+            
+        LOGIN SEBAGAI USER:
+        Crete Order
+            POST {{URL}}/orders
+        Get Single Order
+            GET {{URL}}/orders/123
+        Update Order
+            GET {{URL}}/orders/123
+        Get Current User Order
+            GET {{URL}}/orders/showAllMyOrders
+
     
     
