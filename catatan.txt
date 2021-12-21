@@ -793,5 +793,25 @@
                  lalu salahan satu huruf/agar id tidak terbaca
             response : "msg": "No product with iid : 61bc989c842d833211f73e1d"
             dan pada terminal : product number one 25999 /uploads/example.jpeg
-    
+
+#Section 13: E-Commerce API | 302. Create Order - Check Product part 3 (basic add order and calculate subtotal)
+    pengujian pada Postman:
+        Create order
+        POST {{URL}}/orders
+            body -> raw -> json:
+                copy data json pada file mockData/order.jsn lalu pastekan satu data,
+                pada tahap ini ambil id product : get all product lalu 
+                copy salah satu id product lalu pastekan/isikan  pada data yang mau kita insert
+            response : create order,
+            dan pada terminal : 
+                [
+                    {
+                        amount: 34,
+                        name: 'product number one',
+                        price: 25999,
+                        image: '/uploads/example.jpeg',
+                        product: new ObjectId("61bc989c842d833211f73e1b")
+                    }
+                ]
+                883966
     
