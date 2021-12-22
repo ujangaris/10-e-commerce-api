@@ -12,7 +12,6 @@ const {
   createOrder,
   updateOrder,
 } = require('../controllers/orderController');
-const { get } = require('./reviewRoutes');
 
 router
   .route('/')
