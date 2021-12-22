@@ -815,3 +815,113 @@
                 ]
                 883966
     
+#Section 13: E-Commerce API | 303. Create Order - Complete
+    pengujian pada Postman:
+        Create order satu product
+        POST {{URL}}/orders
+            body -> raw -> json:
+                copy data json pada file mockData/order.jsn lalu pastekan satu data,
+                pada tahap ini ambil id product : get all product lalu 
+                copy salah satu id product lalu pastekan/isikan  pada data yang mau kita insert
+                {
+                    "tax": 399,
+                    "shippingFee": 499,
+                    "items": [
+                    {
+                        "name": "accent chair",
+                        "price": 2599,
+                        "image": "https://dl.airtable.com/.attachmentThumbnails/e8bc3791196535af65f40e36993b9e1f/438bd160",
+                        "amount": 34,
+                        "product": "61bc989c842d833211f73e1b"
+                    }
+                    ]
+                }
+            response : 
+                {
+                    "order": {
+                        "tax": 399,
+                        "shippingFee": 499,
+                        "subtotal": 883966,
+                        "total": 884864,
+                        "orderItems": [
+                            {
+                                "name": "product number one",
+                                "image": "/uploads/example.jpeg",
+                                "price": 25999,
+                                "amount": 34,
+                                "product": "61bc989c842d833211f73e1b",
+                                "_id": "61c2fe29a7e057b927a230bf"
+                            }
+                        ],
+                        "status": "pending",
+                        "user": "61b204ba07646ad8eb5a30ca",
+                        "clientSecret": "someRandomValue",
+                        "_id": "61c2fe29a7e057b927a230be",
+                        "createdAt": "2021-12-22T10:30:01.690Z",
+                        "updatedAt": "2021-12-22T10:30:01.690Z",
+                        "__v": 0
+                    },
+                    "clientSecret": "someRandomValue"
+                }
+
+        Create order dua product
+        POST {{URL}}/orders
+            body -> raw -> json:
+                copy data json pada file mockData/order.jsn lalu pastekan 2 data,
+                pada tahap ini ambil 2 id product : get all product lalu 
+                copy  id product lalu pastekan/isikan  pada data yang mau kita insert
+                {
+                    "tax": 499,
+                    "shippingFee": 799,
+                    "items": [
+                    {
+                        "name": "bed",
+                        "price": 2699,
+                        "image": "https://dl.airtable.com/.attachmentThumbnails/e8bc3791196535af65f40e36993b9e1f/438bd160",
+                        "amount": 3,
+                        "product": "61bc989c842d833211f73e1b"
+                    },
+                    {
+                        "name": "chair",
+                        "price": 2999,
+                        "image": "https://dl.airtable.com/.attachmentThumbnails/e8bc3791196535af65f40e36993b9e1f/438bd160",
+                        "amount": 2,
+                        "product": "61c046dccf968c1c77f04a7a"
+                    }
+                    ]
+                }
+            response : 
+                {
+                    "order": {
+                        "tax": 499,
+                        "shippingFee": 799,
+                        "subtotal": 129995,
+                        "total": 131293,
+                        "orderItems": [
+                            {
+                                "name": "product number one",
+                                "image": "/uploads/example.jpeg",
+                                "price": 25999,
+                                "amount": 3,
+                                "product": "61bc989c842d833211f73e1b",
+                                "_id": "61c2fde8a7e057b927a230ba"
+                            },
+                            {
+                                "name": "product number two",
+                                "image": "/uploads/example.jpeg",
+                                "price": 25999,
+                                "amount": 2,
+                                "product": "61c046dccf968c1c77f04a7a",
+                                "_id": "61c2fde8a7e057b927a230bb"
+                            }
+                        ],
+                        "status": "pending",
+                        "user": "61b204ba07646ad8eb5a30ca",
+                        "clientSecret": "someRandomValue",
+                        "_id": "61c2fde8a7e057b927a230b9",
+                        "createdAt": "2021-12-22T10:28:56.886Z",
+                        "updatedAt": "2021-12-22T10:28:56.886Z",
+                        "__v": 0
+                    },
+                    "clientSecret": "someRandomValue"
+                }

@@ -4,6 +4,11 @@ const { StatusCodes } = require('http-status-codes');
 const CustomError = require('../errors');
 const { checkPermissions } = require('../utils');
 
+const fakeStripeAPI = async ({ amount, currency }) => {
+  const client_secret = 'someRandomValue';
+  return { client_secret, amount };
+};
+
 const createOrder = async (req, res) => {
   const { items: cartItems, tax, shippingFee } = req.body;
 
@@ -23,7 +28,7 @@ const createOrder = async (req, res) => {
     const dbProduct = await Product.findOne({ _id: item.product });
     if (!dbProduct) {
       throw new CustomError.NotFoundError(
-        `No product with iid : ${item.product}`
+        `No product with id : ${item.product}`
       );
     }
     const { name, price, image, _id } = dbProduct;
@@ -39,9 +44,27 @@ const createOrder = async (req, res) => {
     // calculate subtotal
     subtotal += item.amount * price;
   }
-  console.log(orderItems);
-  console.log(subtotal);
-  res.send('create order');
+  // calculate total
+  const total = tax + shippingFee + subtotal;
+  // get client secret
+  const paymentIntent = await fakeStripeAPI({
+    amount: total,
+    currency: 'usd',
+  });
+
+  const order = await Order.create({
+    orderItems,
+    total,
+    subtotal,
+    tax,
+    shippingFee,
+    clientSecret: paymentIntent.client_secret,
+    user: req.user.userId,
+  });
+
+  res
+    .status(StatusCodes.CREATED)
+    .json({ order, clientSecret: order.clientSecret });
 };
 const getAllOrders = async (req, res) => {
   res.send('get All orders');
