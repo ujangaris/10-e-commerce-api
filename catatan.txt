@@ -934,3 +934,7 @@
     pengujian pada postman:
         login sebagai admin/user, kemudian Get All orders lalu ambil id order yang ingin di uji
         selanjutnya get single order untuk send request
+
+#Section 13: E-Commerce API | 304. All Order Routes - Get Current User Orders
+    pengujian pada postman:
+        login sebagai admin/user, kemudian Get Current User Orders untuk send request
