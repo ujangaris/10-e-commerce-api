@@ -71,7 +71,14 @@ const getAllOrders = async (req, res) => {
   res.status(StatusCodes.OK).json({ orders, count: orders.length });
 };
 const getSingleOrder = async (req, res) => {
-  res.send('get Single order');
+  const { id: orderId } = req.params;
+  const order = await Order.findOne({ _id: orderId });
+  if (!order) {
+    throw new CustomError.NotFoundError(`No order with id : ${orderId}`);
+  }
+  checkPermissions(req.user, order.user);
+
+  res.status(StatusCodes.OK).json({ order });
 };
 const getCurrentUserOrders = async (req, res) => {
   res.send('get Current Users order');
