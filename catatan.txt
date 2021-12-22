@@ -925,3 +925,7 @@
                     },
                     "clientSecret": "someRandomValue"
                 }
+
+#Section 13: E-Commerce API | 304. All Order Routes - getAllOrders - admin only
+    pengujian pada postman:
+        login sebagai admin, kemudian Get All orders
