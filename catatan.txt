@@ -990,5 +990,52 @@
     maka akan ada file index.html
 
 #Section 13: E-Commerce API | 307. Security Packages
-        
+
+#Section 13: E-Commerce API | 308. Deploy on Heroku
+    pertama copy project starter lalu pasterkan pada Desktop dan namakan dengan nama e-commerce
+        pada package.json:
+            "scripts": {
+                "start": "node app.js",
+                "dev": "nodemon app.js"
+            },
+
+            selanjutnya harus ada ini:
+            "engines": {
+                "node": "14.x"
+            }
+
+            tambahkan file Procfile pada root project:
+                web: node app.js
+            
+            ketikan perintah berikut pada terminal:
+                rm -rf .git - mac,
+                git init 
+                git add .
+            pada .gitignore :
+                /node_modules
+                .env
+            
+            pada terminal kembali:
+                git commit -m "firt commit"
+                heroku login
+            
+            akan muncul tab baru pada browsher, kemudian silahkan klik login .
+            maka pada terminal akan ada keterangan akun yang sedang terhubung ke heroku.
+
+            pada terminal:
+                heroku create e-commerce-api-10jhon => untuk nama silahkan cari yang tersedia.
+
+                untuk memeriksa :
+                    git remote -v
+
+            selanjutnya, pada browser buka heroku, pilih aplikasi yang sudah kita create=> e-commerce-api-10jhon
+            pilih seting, klik Config Vars lalu semua source yang berada pada .env di isi satu persatu.
+
+            pada terminal :
+                git push heroku master
+
+                
+            pada browser untuk melihat hasil bisa klik Open app
+
+
         
