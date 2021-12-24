@@ -1037,5 +1037,26 @@
                 
             pada browser untuk melihat hasil bisa klik Open app
 
+#Section 13: E-Commerce API | 309. Small Fixes
+    kalo kiti coba klik pada browser hasil app yang kita deploy pada heroku , 
+    akan ada masalah yakni beberapa featur javascript yang tidak berjalan sebagaimana mestinya .
+    untuk mengatasinya:
+        []  buka kembali docs.json pada code editor, 
+            kemudian ganti semua http://localhost:5000 
+            dengan alamat yang ada pada heroku : https://e-commerce-api-10jhon.herokuapp.com/
+            tambahkan api/v1, sehingga menjadi: https://e-commerce-api-10jhon.herokuapp.com/api/v1
+        []  kemudian buka terminal dan arahkan ke directory Desktop, lalu ketikan comman:
+            docgen build -i docs.json -o index.html
+            maka akan ada file index.html, lalu patekan kembali pada file public(index yang lama hapus saja)
+        []  pada index.html yang sudah dipindahkan klik kanan terus pilih format document with pilih HTML language
+        []  cari file script javascript , copy semua file dan pindahkan pada file baru browser-app.js
+            hapus kalimat <script></script> lalu pada file index hubungkan dengan file browser-app.js
+        [] coba jalan kembali server : npm run dev ,buka http://localhost:5000/
+        [] jika berhasil, pada terminal  :  git add .
+                                            git commit -m"added few fixes"
+                                            git push heroku master
+        []  done!
+
+
 
         
