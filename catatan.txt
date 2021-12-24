@@ -975,3 +975,19 @@
                 "paymentIntentId": "someRandomId"
             }
         }
+
+#Section 13: E-Commerce API | 305. Docgen - Install
+    Documentation: https://github.com/thedevsaddam/docgen
+        
+#Section 13: E-Commerce API | 306. Docgen - Create Docs
+    export E-Commerce API -> Collection v2.1 (recommended)
+    kemudian simpan dengan nama docs.json dan save pada Desktop
+
+    blok {{URL}}, kemudian ctr + D (blok semua {{URL}}) dan ganti dengan http://localhost:5000
+
+    kemudian buka terminal dan arahkan ke directory Desktop, lalu ketikan comman:
+        docgen build -i docs.json -o index.html
+    maka akan ada file index.html
+
+        
+        
